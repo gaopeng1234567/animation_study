@@ -1,0 +1,468 @@
+@import url('http://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fff;
+    color: #212121;
+    font-size: 14px;
+}
+
+
+section {
+    width: 100%;
+    padding: 60px 0;
+    position: relative;
+}
+
+.title {
+    display: block;
+    color: #e1234b;
+    font-size: 44px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0 0 30px 0;
+}
+
+.btn {
+    background-color: #e1234b;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    border-radius: 50px;
+}
+
+.btn:hover {
+    background-color: #bd1226;
+    color: #fff;
+}
+
+/*header*/
+.header {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .logo {
+    display: block;
+}
+
+.header .logo img {
+    height: 80px;
+}
+
+.header .burger {
+    display: none;
+}
+
+.header .menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.header .menu a {
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    margin-left: 10px;
+    padding-bottom: 5px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all .4s ease;
+}
+
+.header .menu a::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    transition: all .4s ease;
+}
+
+.header .menu a:hover::after {
+    width: 100%;
+}
+
+/*hero*/
+
+.hero {
+    min-height: 100vh;
+    padding: 0;
+}
+
+.hero .container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero::before,
+.hero::after {
+    position: absolute;
+    content: "";
+    width: 50%;
+    height: 100%;
+    top: 0;
+}
+
+.hero::before {
+    background-color: #fff;
+    left: 0;
+}
+
+.hero::after {
+    background-color: #e1234b;
+    right: 0;
+}
+
+.hero .swiper-container {
+    width: 100%;
+    overflow: inherit;
+    position: relative;
+}
+
+/*.hero .swiper-container .swiper-container-fade .swiper-slide,*/
+/*.hero .swiper-container .swiper-button-prev {*/
+/*    opacity: 1 !important;*/
+/*}*/
+
+
+.hero .swiper-container .box-slide {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero .swiper-container .box-slide .texts {
+    width: 25%;
+    padding-left: 30px;
+}
+
+.hero .swiper-container .box-slide .img-slide {
+    width: 50%;
+}
+
+.hero .swiper-container .box-slide .price {
+    width: 20%;
+    padding-left: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero .swiper-container .controls-slide {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.hero .swiper-container .swiper-button-prev,
+.hero .swiper-container .swiper-button-next {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-color: #8b4513;
+    border-radius: 50%;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.hero .swiper-container .swiper-button-prev::after,
+.hero .swiper-container .swiper-button-next::after {
+    font-size: 20px;
+    color: #fff;
+}
+
+.hero .swiper-container .box-slide .texts p {
+    color: #8b4513;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 0 15px 0;
+}
+
+.hero .swiper-container .box-slide .price span {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #e1234b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: 900;
+    box-shadow: 1px 1px 27px 4px rgba(0, 0, 0, 0.34);
+}
+
+
+/*burgers */
+.burgers {
+    background-color: #f8f8f8;
+
+}
+
+.burgers .title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.burgers .card-burger {
+    margin-bottom: 30px;
+    border-radius: 6px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15px;
+    transition: all .4s ease;
+}
+
+.burgers .card-burger img {
+    object-fit: cover;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 2px solid #e1234b;
+    margin: 0 0 30px 0;
+    transition: all .4s ease;
+}
+
+.burgers .card-burger h4 {
+    font-size: 22px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #e1234b;
+    margin: 0 0 5px 0;
+    transition: all .4s ease;
+}
+
+
+.burgers .card-burger p {
+    font-size: 16px;
+    font-weight: normal;
+    color: #8b4513;
+    margin: 0 0 15px 0;
+    text-align: center;
+    transition: all .4s ease;
+}
+
+.burgers .card-burger span {
+    width: 160px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #e1234b;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .4s ease;
+}
+
+.burgers .card-burger:hover {
+    background-color: #e1234b;
+}
+
+.burgers .card-burger:hover img {
+    border-color: #fff;
+}
+
+.burgers .card-burger:hover h4,
+.burgers .card-burger:hover p {
+    color: #fff;
+}
+
+.burgers .card-burger:hover span {
+    background-color: #fff;
+    color: #e1234b;
+}
+
+/*about*/
+
+.about {
+    min-height: 100vh;
+    padding: 0;
+    background-color: #8b4513;
+}
+
+.about::before,
+.about::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 1;
+}
+
+.about::before {
+    left: 0;
+    background-color: #8b4513;
+}
+
+.about::after {
+    right: 0;
+    background-image: url("../images/3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    mix-blend-mode: hard-light;
+}
+
+.about .container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    z-index: 2;
+}
+
+.about .title {
+    margin-bottom: 60px;
+    color: #fff;
+}
+
+.about img {
+    width: 100%;
+}
+
+.about h3 {
+    font-size: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #fff;
+    margin: 0 0 10px 0;
+}
+
+.about p {
+    font-size: 16px;
+    color: #fff;
+}
+
+/*recipe*/
+
+.recipes{
+    background-color: #f8f8f8;
+}
+.recipes .title{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.recipes .card-burger{
+    margin-bottom: 30px;
+    border-radius: 6px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 15px;
+    transition: all .4s ease;
+}
+
+.recipes .card-burger img{
+    object-fit: cover;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 2px solid #e1234b;
+    margin: 0 0 30px 0;
+    transition: all .4s ease;
+}
+
+.recipes .card-burger h4{
+    font-size: 22px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #e1234b;
+    margin: 0 0 5px 0;
+    transition: all .4s ease;
+}
+
+.recipes .card-burger p {
+    font-size: 16px;
+    font-weight: normal;
+    color: #8b4513;
+    margin: 0 0 15px 0;
+    text-align: center;
+    transition: all .4s ease;
+}
+
+.recipes .card-burger:hover {
+    background-color: #e1234b;
+}
+
+.recipes .card-burger:hover img {
+    border-color: #fff;
+}
+
+.recipes .card-burger:hover h4,
+.recipes .card-burger:hover p {
+    color: #fff;
+}
+
+.recipes .card-burger:hover a {
+    background-color: #fff;
+    color: #e1234b;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
